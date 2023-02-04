@@ -6,6 +6,7 @@ print('-'*50)
 
 numero_secreto = random.randrange(1, 101)
 tentativas = 0
+pontos = 1000
 
 print('Escolha um nível de dificuldade:')
 print('(1) Fácil\n(2) Médio\n(3) Difícil\n')
@@ -48,6 +49,7 @@ for rodada in range (1, tentativas + 1, 1):
 
     if (numero_secreto == palpite):
         print('Você acertou!')
+        print(f'PONTUAÇÃO: {pontos}')
         print('-' * 50)
         break
     else:
@@ -57,4 +59,6 @@ for rodada in range (1, tentativas + 1, 1):
         elif (menor):
             print('O número escolhido é MENOR do que o número secreto.')
             print('-' * 50)
+        pontos_perdidos = abs(palpite - numero_secreto)
+        pontos = pontos - pontos_perdidos
 print('Fim de jogo.')
