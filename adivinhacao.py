@@ -63,3 +63,6 @@ def jogar():
             pontos_perdidos = abs(palpite - numero_secreto)
             pontos = pontos - pontos_perdidos
     print('Fim de jogo.')
+
+if (__name__ == "__main__"):
+    jogar()
