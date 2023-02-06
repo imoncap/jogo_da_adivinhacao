@@ -48,7 +48,7 @@ def jogar():
         maior = palpite > numero_secreto
         menor = palpite < numero_secreto
 
-        if (numero_secreto == palpite):
+        if (acertou):
             print('Você acertou!')
             print(f'PONTUAÇÃO: {pontos}')
             print('-' * 50)
