@@ -24,8 +24,8 @@ def jogar():
                 index += 1
         else:
             erros += 1
-
-        enforcou = erros == 6
+            print(f"Que pena, essa letra não existe na palavra secreta!\nVocê ainda tem {(len(palavra_secreta) - erros)} tentativas.\n")
+        enforcou = erros == len(palavra_secreta)
         acertou = "_" not in letras_acertadas
         print(letras_acertadas)
     if(acertou):
