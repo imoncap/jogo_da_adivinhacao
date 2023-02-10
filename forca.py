@@ -4,7 +4,7 @@ def jogar():
     print('-'*50)
 
     palavra_secreta = "banana".upper()
-    letras_acertadas = ["_", "_", "_", "_", "_", "_"]
+    letras_acertadas = ["_" for letra in palavra_secreta]
 
     enforcou = False
     acertou = False
@@ -25,7 +25,7 @@ def jogar():
         else:
             erros += 1
             print(f"Que pena, essa letra não existe na palavra secreta!\nVocê ainda tem {(len(palavra_secreta) - erros)} tentativas.\n")
-        enforcou = erros == len(palavra_secreta)
+        enforcou = erros == 6
         acertou = "_" not in letras_acertadas
         print(letras_acertadas)
     if(acertou):
